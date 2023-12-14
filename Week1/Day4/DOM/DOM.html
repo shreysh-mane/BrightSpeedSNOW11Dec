@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hi</p>
+
+    <button>Click me</button>
+
+
+    <h1>Hello</h1>
+    <h1>BYE</h1>
+
+    <!-- 1. Print input from input box based on button click -->
+    <!-- 2. Change the color of the text which user clicks on the text -->
+
+    <!-- 3. Create a h1 tag with "demo text" inside it now when I click on that text, the text should get chaged to "I got clicked" and chagen the backgroud color of that h1 tag to pink. -->
+
+    <!-- 4. Create an array with 3 userObjects: name, city , age. put those in an array. 
+    Now in HTML page. Create an empty div tag: <div></div>
+    and below this div tag create an button.
+    Now when the user clicks on that button. The names present in all those 3 obj should get printed with <h1>
+
+    after clicking your div should look like this:
+    <div>
+        <h1>name<h1>
+        <h1>name<h1>
+        <h1>name<h1>
+    </div> -->
+
+    <script>
+
+
+
+
+        // var p= document.getElementById('p1');
+        // var btn=document.getElementsByTagName('button');
+        // console.log(p.textContent);
+
+        // var h=document.getElementsByTagName('h1');
+        // console.log(h[0]);
+        // Diff bet innerHTML and TextContent.
+        // p.innerHTML="<b>Bold</b>";
+        // h[0].textContent="<b>Bold</b>";
+
+
+        // console.log(p.innerHTML);
+
+        
+        // querySelector and querySelectorALL;
+
+        // CSS selector rule #, ., tagname
+        // var ele= document.querySelector('#p1');
+        // console.log(ele);
+
+        // var hEle= document.querySelector('h1');
+        // console.log(hEle);
+
+        // var hELE2= document.querySelectorAll('#p1');
+        // console.log(hELE2);
+
+
+        // Events in JS
+
+        function chgColor(){
+            p.style.color="red";
+        }
+
+
+
+        btn[0].addEventListener('click',chgColor);
+
+
+    </script>
+</body>
+</html>
