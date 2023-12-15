@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="d3" style="padding: 20px; border: 2px solid green; background-color: green;">
+        <div id="d2" style="padding: 20px; border: 2px solid yellow; background-color: yellow;">
+            <div id="d1" style="padding: 20px; border: 2px solid red; background-color: red;">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var d1Ele=document.getElementById("d1");
+        var d2Ele=document.getElementById("d2");
+        var d3Ele=document.getElementById("d3");
+
+
+
+
+        function d1Clicked(){
+            console.log("d1 got Clicked");
+            // 
+           
+        }
+        function d2Clicked(){
+            console.log("d2 got Clicked");
+            //
+        }
+        function d3Clicked(){
+            console.log("d3 got Clicked");
+            event.stopPropagation();
+        }
+
+
+        d3Ele.addEventListener("click",d3Clicked,true);
+        d2Ele.addEventListener("click",d2Clicked,true);
+        d1Ele.addEventListener("click",d1Clicked);
+
+    </script>
+
+</body>
+</html>
