@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <button onclick="deleteData()" >Click to fetch Data</button>
+    <button onclick="fetchData()" >Click to fetch Data</button>
 
     <p id="p1"></p>
 
@@ -74,6 +74,11 @@
 
             // asyn await
 
+            async function fetchData(){
+                let resp= await fetch("http://localhost:3000/user/1");
+                let data= await resp.json();
+                console.log(data);
+            }
     </script>
     
 </body>
