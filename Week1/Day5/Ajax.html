@@ -13,30 +13,42 @@
 
     <script>
 
-        function fetchData(){
-            // console.log("fetch AJax");
+        // function fetchDataAJAX(){
+        //     // console.log("fetch AJax");
 
-            let xttp= new XMLHttpRequest();
+        //     let xttp= new XMLHttpRequest();
 
-            xttp.open("GET","https://newsapi.org/v2/everything?q=apple&apiKey=", true);
+        //     xttp.open("GET","https://newsapi.org/v2/everything?q=apple&apiKey=", true);
 
-            xttp.send();
+        //     xttp.send();
 
-            xttp.onreadystatechange= function(){
+        //     xttp.onreadystatechange= function(){
 
-                if(xttp.readyState == 4 && xttp.status==200){
-                    var resp= xttp.responseText;
-                    document.getElementById("p1").innerHTML=resp;
+        //         if(xttp.readyState == 4 && xttp.status==200){
+        //             var resp= xttp.responseText;
+        //             document.getElementById("p1").innerHTML=resp;
 
-                    // var data= JSON.parse(resp);
-                    // console.log(data);
-                    // console.log(data.articles[0].author);
+        //             // var data= JSON.parse(resp);
+        //             // console.log(data);
+        //             // console.log(data.articles[0].author);
 
-                }
+        //         }
+
+        //     }
+
+        // }
+
+
+            function fetchData(){
+                
+                fetch("https://newsapi.org/v2/everything?q=apple&apiKey=dfb1707d566f4303a44035678e264d3f")
+                .then( resp => resp.json())
+                .then( data => console.log(data))
+                .catch(error => console.log(error));
 
             }
 
-        }
+
 
     </script>
     
