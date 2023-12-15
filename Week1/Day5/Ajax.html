@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="fetchData()" >Click to fetch Data</button>
+
+    <p id="p1"></p>
+
+    <script>
+
+        function fetchData(){
+            // console.log("fetch AJax");
+
+            let xttp= new XMLHttpRequest();
+
+            xttp.open("GET","https://newsapi.org/v2/everything?q=apple&apiKey=", true);
+
+            xttp.send();
+
+            xttp.onreadystatechange= function(){
+
+                if(xttp.readyState == 4 && xttp.status==200){
+                    var resp= xttp.responseText;
+                    document.getElementById("p1").innerHTML=resp;
+
+                    // var data= JSON.parse(resp);
+                    // console.log(data);
+                    // console.log(data.articles[0].author);
+
+                }
+
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
