@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <!-- The angularJs searched for ng-app to starts its execution. It difines from which location the angularJs functionality should get applied. -->
+    <!-- We assign the module name to ng-app -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+    <h1>The sum of 3 and 4 is {{3+4}}</h1>
+    <!-- {{}} We difine small expressions, variable names in these parenthesis which will get eveluated by angularJS. -->
+
+    <div  ng-app="demo">
+
+   
+    <h1>Is 3 grator that 4= {{3>4}}</h1>
+    <p>{{2+"2"}}</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+
+    <Script>
+        angular.module('demo',[]);
+        //If given second parameter [] we are telling that we are creating a new module.
+        //If we just write angular.module('') the it says we are using already created module.
+    </Script>
+</body>
+</html>
