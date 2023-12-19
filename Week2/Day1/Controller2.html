@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="app">
+
+    <div ng-controller="Ctrl">
+        {{name}}
+
+        {{add()}}
+
+        <p>{{age}}</p>
+
+    </div>
+
+
+    <div ng-controller="Ctrl2">
+
+
+        {{city}}
+
+    </div>
+
+    <div ng-controller="Ctrl3">
+
+
+        {{company}}
+
+    </div>
+    
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+
+    <script>
+
+        var app= angular.module("app",[]);
+
+        app.controller("Ctrl",function($scope){
+            // this.name="Mohit";
+
+            $scope.name="Mohit";
+
+            $scope.add=function(){
+                return 10-2;
+            }
+
+        });
+
+
+        app.controller("Ctrl2",function($scope,$window){
+            // this.name="Mohit";
+
+           $scope.city="Satara";
+           
+
+        });
+
+
+
+        // Modified way
+
+
+        app.controller("Ctrl3",["$scope","$window",function(s,w){
+
+            s.company="Revature";
+        }])
+
+
+
+    </script>
+</body>
+</html>
