@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="app">
+
+    <div ng-controller="serviceCtrl">  
+            
+        <ul>
+            <li ng-repeat="no in arr">{{no}}</li>
+        </ul>
+
+        <button ng-click="getData()">Get Data</button>
+
+        <button ng-click="sendData(3)">Send Data</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="./serviceCtrl.js"></script>
+    <script src="./demoService.js"></script>
+
+    
+
+</body>
+</html>
